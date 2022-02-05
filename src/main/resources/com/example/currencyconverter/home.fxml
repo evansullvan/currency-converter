@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.Homecontroller">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="316.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="326.0">
+               <children>
+                  <TextField fx:id="currencyIn" onKeyTyped="#onNumberEntered">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="currencyOut" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="100.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="315.0" prefHeight="400.0" prefWidth="285.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="289.0">
+               <children>
+                  <ComboBox prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="30.0" top="100.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
