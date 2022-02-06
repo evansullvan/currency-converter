@@ -26,6 +26,8 @@ public class Homecontroller implements Initializable {
     @FXML
     private ComboBox currencytypeOut;
 
+    @FXML
+    private Label info;
 
 
 
@@ -43,16 +45,16 @@ public class Homecontroller implements Initializable {
             case "USD":
                 switch (exchangerate2){
                     case "EURO":
-
+                        info.setText("1 United States Dollar equals 0.87 Euro");
                          output = Double.valueOf(currencyIn.getText())*0.8735;
                         break;
                     case "POUND-STERLING":
-
+                        info.setText("1 United States Dollar equals 0.75 Pounds");
                         output = Double.valueOf(currencyIn.getText())*0.75;
                         break;
 
                     case "USD":
-
+                        info.setText("1 United States Dollar equals 1 United States Dollar");
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
                 }
@@ -60,14 +62,17 @@ public class Homecontroller implements Initializable {
             case "EURO":
                 switch (exchangerate2){
                     case "USD":
+                        info.setText("1 Euro equals 1.14 United States Dollars");
                         output = Double.valueOf(currencyIn.getText())*1.14;
                         break;
 
                     case "POUND-STERLING":
+                        info.setText("1 Euro equals 0.85 Pounds");
                         output = Double.valueOf(currencyIn.getText())*0.85;
                         break;
 
                     case "EURO":
+                        info.setText("1 Euro equals 1 Euro");
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
                 }
@@ -76,20 +81,24 @@ public class Homecontroller implements Initializable {
             case "POUND-STERLING":
                 switch (exchangerate2){
                     case "USD":
+                        info.setText("1 Pound equals 1.35 United States Dollars");
                         output = Double.valueOf(currencyIn.getText())*1.35;
                         break;
 
                     case "POUND-STERLING":
+                        info.setText("1 Pound equals 1 Pound");
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
 
                     case "EURO":
-                        output = Double.valueOf(currencyIn.getText())*1.18;
+                        info.setText("1 Pound equals 1.18 Euro");
+                            output = Double.valueOf(currencyIn.getText())*1.18;
+
+
                         break;
                 }
                 break;
         }
-
 
     currencyOut.setText(String.valueOf(output));
 
@@ -97,7 +106,7 @@ public class Homecontroller implements Initializable {
 
     public boolean isValidnumber(String number) {
 
-        String ePattern = "^[0-9999999999999999999999999999999999999999999999999]";
+        String ePattern = "[1-9][0-9]*";
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
         java.util.regex.Matcher m = p.matcher(number);
         return m.matches();
