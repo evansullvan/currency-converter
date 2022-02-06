@@ -33,12 +33,12 @@
          <children>
             <VBox prefHeight="400.0" prefWidth="289.0">
                <children>
-                  <ComboBox prefWidth="150.0">
+                  <ComboBox fx:id="currencytypeIn" prefWidth="150.0">
                      <VBox.margin>
                         <Insets bottom="30.0" />
                      </VBox.margin>
                   </ComboBox>
-                  <ComboBox prefWidth="150.0" />
+                  <ComboBox fx:id="currencytypeOut" prefWidth="150.0" />
                </children>
                <padding>
                   <Insets left="30.0" top="100.0" />
