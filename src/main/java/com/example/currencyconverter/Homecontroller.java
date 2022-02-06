@@ -29,10 +29,6 @@ public class Homecontroller implements Initializable {
 
 
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @FXML
     protected void onNumberEntered(){
@@ -50,22 +46,24 @@ public class Homecontroller implements Initializable {
 
                          output = Double.valueOf(currencyIn.getText())*0.8735;
                         break;
-                    case "POUND STERLING":
+                    case "POUND-STERLING":
 
-                        output = Double.valueOf(currencyIn.getText())*0.74;
+                        output = Double.valueOf(currencyIn.getText())*0.75;
                         break;
 
                     case "USD":
+
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
                 }
+                break;
             case "EURO":
                 switch (exchangerate2){
                     case "USD":
                         output = Double.valueOf(currencyIn.getText())*1.14;
                         break;
 
-                    case "POUND STERLING":
+                    case "POUND-STERLING":
                         output = Double.valueOf(currencyIn.getText())*0.85;
                         break;
 
@@ -73,14 +71,15 @@ public class Homecontroller implements Initializable {
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
                 }
+                break;
 
-            case "POUND STERLING":
+            case "POUND-STERLING":
                 switch (exchangerate2){
                     case "USD":
                         output = Double.valueOf(currencyIn.getText())*1.35;
                         break;
 
-                    case "POUND STERLING":
+                    case "POUND-STERLING":
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
 
@@ -88,6 +87,7 @@ public class Homecontroller implements Initializable {
                         output = Double.valueOf(currencyIn.getText())*1.18;
                         break;
                 }
+                break;
         }
 
 
@@ -111,9 +111,9 @@ public class Homecontroller implements Initializable {
 
 
 
-        ObservableList<String> currencytypein = FXCollections.observableArrayList("EURO","USD","POUND STERLING");
+        ObservableList<String> currencytypein = FXCollections.observableArrayList("EURO","USD","POUND-STERLING");
 
-        ObservableList<String> currencytypeout = FXCollections.observableArrayList("EURO","USD","POUND STERLING");
+        ObservableList<String> currencytypeout = FXCollections.observableArrayList("EURO","USD","POUND-STERLING");
 
         currencytypeIn.setItems(currencytypein);
         currencytypeOut.setItems(currencytypeout);
