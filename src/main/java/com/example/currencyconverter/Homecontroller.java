@@ -45,16 +45,16 @@ public class Homecontroller implements Initializable {
             case "USD":
                 switch (exchangerate2){
                     case "EURO":
-                        info.setText("1 United States Dollar equals 0.87 Euro");
+
                          output = Double.valueOf(currencyIn.getText())*0.8735;
                         break;
                     case "POUND-STERLING":
-                        info.setText("1 United States Dollar equals 0.75 Pounds");
+
                         output = Double.valueOf(currencyIn.getText())*0.75;
                         break;
 
                     case "USD":
-                        info.setText("1 United States Dollar equals 1 United States Dollar");
+
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
                 }
@@ -62,17 +62,17 @@ public class Homecontroller implements Initializable {
             case "EURO":
                 switch (exchangerate2){
                     case "USD":
-                        info.setText("1 Euro equals 1.14 United States Dollars");
+
                         output = Double.valueOf(currencyIn.getText())*1.14;
                         break;
 
                     case "POUND-STERLING":
-                        info.setText("1 Euro equals 0.85 Pounds");
+
                         output = Double.valueOf(currencyIn.getText())*0.85;
                         break;
 
                     case "EURO":
-                        info.setText("1 Euro equals 1 Euro");
+
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
                 }
@@ -81,17 +81,17 @@ public class Homecontroller implements Initializable {
             case "POUND-STERLING":
                 switch (exchangerate2){
                     case "USD":
-                        info.setText("1 Pound equals 1.35 United States Dollars");
+
                         output = Double.valueOf(currencyIn.getText())*1.35;
                         break;
 
                     case "POUND-STERLING":
-                        info.setText("1 Pound equals 1 Pound");
+
                         output = Double.valueOf(currencyIn.getText())*1;
                         break;
 
                     case "EURO":
-                        info.setText("1 Pound equals 1.18 Euro");
+
                             output = Double.valueOf(currencyIn.getText())*1.18;
 
 
@@ -99,8 +99,10 @@ public class Homecontroller implements Initializable {
                 }
                 break;
         }
+       double output2 =  Math.round(output * 10000.0) / 10000.0;
+        info.setText(currencyIn.getText()+" "+currencytypeIn.getValue()+ " = " +output2+" "+ currencytypeOut.getValue());
 
-    currencyOut.setText(String.valueOf(output));
+    currencyOut.setText(String.valueOf(output2));
 
     }
 
