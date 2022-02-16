@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.Homecontroller">
+<AnchorPane prefHeight="400.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.Currencycontroller">
    <children>
       <HBox prefHeight="400.0" prefWidth="316.0">
          <children>
@@ -20,7 +20,6 @@
                         <Insets bottom="30.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField fx:id="currencyOut" disable="true" editable="false" />
                   <Label fx:id="info" prefHeight="50.0" prefWidth="297.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
@@ -38,14 +37,13 @@
       </HBox>
       <HBox layoutX="315.0" prefHeight="400.0" prefWidth="285.0">
          <children>
-            <VBox prefHeight="400.0" prefWidth="289.0">
+            <VBox prefHeight="400.0" prefWidth="358.0">
                <children>
-                  <ComboBox fx:id="currencytypeIn" prefWidth="150.0">
+                  <ComboBox fx:id="currencytypeIn" prefWidth="150.0" promptText="From">
                      <VBox.margin>
                         <Insets bottom="30.0" />
                      </VBox.margin>
                   </ComboBox>
-                  <ComboBox fx:id="currencytypeOut" prefWidth="150.0" />
                </children>
                <padding>
                   <Insets left="30.0" top="100.0" />
@@ -53,5 +51,6 @@
             </VBox>
          </children>
       </HBox>
+      <ComboBox fx:id="currencytypeOut" layoutX="534.0" layoutY="99.0" prefWidth="150.0" promptText="To" />
    </children>
 </AnchorPane>

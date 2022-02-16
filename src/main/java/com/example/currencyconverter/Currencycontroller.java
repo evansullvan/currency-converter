@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Homecontroller implements Initializable {
+public class Currencycontroller implements Initializable {
     @FXML
     private Label welcomeText;
 
@@ -29,7 +29,9 @@ public class Homecontroller implements Initializable {
     @FXML
     private Label info;
 
-
+    double output = 0;
+    String exchangerate1 = (String) currencytypeIn.getValue();
+    String exchangerate2 = (String) currencytypeOut.getValue();
 
 
     @FXML
@@ -37,9 +39,7 @@ public class Homecontroller implements Initializable {
 
 //currency in is in euro
 
-        double output = 0;
-        String exchangerate1 = (String) currencytypeIn.getValue();
-        String exchangerate2 = (String) currencytypeOut.getValue();
+
 
         switch (exchangerate1){
             case "USD":
@@ -102,7 +102,7 @@ public class Homecontroller implements Initializable {
        double output2 =  Math.round(output * 10000.0) / 10000.0;
         info.setText(currencyIn.getText()+" "+currencytypeIn.getValue()+ " = " +output2+" "+ currencytypeOut.getValue());
 
-    currencyOut.setText(String.valueOf(output2));
+
 
     }
 
@@ -128,7 +128,7 @@ public class Homecontroller implements Initializable {
 
         currencytypeIn.setItems(currencytypein);
         currencytypeOut.setItems(currencytypeout);
-        currencytypeIn.setValue("All");
-        currencytypeOut.setValue("All");
+        currencytypeIn.setValue("EURO");
+        currencytypeOut.setValue("POUND-STERLING");
     }
 }

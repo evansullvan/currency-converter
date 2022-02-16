@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.lengthController">
+    <children>
+        <HBox prefHeight="400.0" prefWidth="316.0">
+            <children>
+                <VBox prefHeight="400.0" prefWidth="326.0">
+                    <children>
+                        <TextField fx:id="lengthIn" onKeyTyped="#onNumberEntered">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label fx:id="info" prefHeight="50.0" prefWidth="297.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+            <padding>
+                <Insets top="100.0" />
+            </padding>
+        </HBox>
+        <HBox layoutX="315.0" prefHeight="400.0" prefWidth="285.0">
+            <children>
+                <VBox prefHeight="400.0" prefWidth="358.0">
+                    <children>
+                        <ComboBox fx:id="lengthtypeIn" prefWidth="150.0" promptText="From">
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </ComboBox>
+                    </children>
+                    <padding>
+                        <Insets left="30.0" top="100.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+        <ComboBox fx:id="lengthtypeOut" layoutX="534.0" layoutY="99.0" prefWidth="150.0" promptText="To" />
+    </children>
+</AnchorPane>
