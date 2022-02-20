@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -9,48 +9,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.Currencycontroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.Currencycontroller">
    <children>
-      <HBox prefHeight="400.0" prefWidth="316.0">
+      <VBox layoutX="112.0" layoutY="31.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox prefHeight="400.0" prefWidth="326.0">
+            <HBox prefHeight="81.0" prefWidth="600.0" style="-fx-padding: 12px;">
                <children>
-                  <TextField fx:id="currencyIn" onKeyTyped="#onNumberEntered">
-                     <VBox.margin>
-                        <Insets bottom="30.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label fx:id="info" prefHeight="50.0" prefWidth="297.0">
+                  <Button mnemonicParsing="false" onAction="#onbackclicked" text="Back" />
+                  <Label fx:id="feedback" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="103.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="currencyIn" onKeyTyped="#onNumberEntered" />
+                  <ComboBox fx:id="currencytypeIn" prefWidth="150.0" />
+                  <ComboBox fx:id="currencytypeOut" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="info" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="Arial Bold" size="18.0" />
                      </font>
                   </Label>
                </children>
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </VBox>
+            </HBox>
          </children>
-         <padding>
-            <Insets top="100.0" />
-         </padding>
-      </HBox>
-      <HBox layoutX="315.0" prefHeight="400.0" prefWidth="285.0">
-         <children>
-            <VBox prefHeight="400.0" prefWidth="358.0">
-               <children>
-                  <ComboBox fx:id="currencytypeIn" prefWidth="150.0" promptText="From">
-                     <VBox.margin>
-                        <Insets bottom="30.0" />
-                     </VBox.margin>
-                  </ComboBox>
-               </children>
-               <padding>
-                  <Insets left="30.0" top="100.0" />
-               </padding>
-            </VBox>
-         </children>
-      </HBox>
-      <ComboBox fx:id="currencytypeOut" layoutX="534.0" layoutY="99.0" prefWidth="150.0" promptText="To" />
+      </VBox>
    </children>
 </AnchorPane>

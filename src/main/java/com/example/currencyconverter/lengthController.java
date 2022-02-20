@@ -2,11 +2,16 @@ package com.example.currencyconverter;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,6 +36,25 @@ public class lengthController implements Initializable {
     @FXML
     private Label info;
 
+    @FXML
+    private Label feedback;
+
+@FXML
+    void onbackclicked(ActionEvent event) {
+        try {
+            /*we can reuse this code in many projects, it changes scenes*/ Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("menu.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 620, 440);
+
+            stage.setTitle("Menu");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e){
+feedback.setText("unable to return home");
+        }
+    }
 
 
 
@@ -113,6 +137,34 @@ public class lengthController implements Initializable {
                     case "Cm":
 
                         output = Double.valueOf(lengthIn.getText())*1;
+
+
+                        break;
+                }
+                break;
+
+            case "Inch":
+                switch (lengthtype2){
+                    case "Inch":
+
+                        output = Double.valueOf(lengthIn.getText())*1;
+                        break;
+
+                    case "Meter":
+
+                        output = Double.valueOf(lengthIn.getText())/39.37;
+                        break;
+
+                    case "Foot":
+
+                        output = Double.valueOf(lengthIn.getText())/12;
+
+
+                        break;
+
+                    case "Cm":
+
+                        output = Double.valueOf(lengthIn.getText())*2.54;
 
 
                         break;

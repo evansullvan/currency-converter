@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Start extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("currency.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Currency Converter");
         stage.setScene(scene);

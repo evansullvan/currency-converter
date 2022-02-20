@@ -2,11 +2,16 @@ package com.example.currencyconverter;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,17 +26,45 @@ public class Currencycontroller implements Initializable {
     @FXML
     private TextField currencyOut;
 
-    @FXML
-    private ComboBox currencytypeIn;
+   @FXML
+   private ComboBox currencytypeIn;
+
     @FXML
     private ComboBox currencytypeOut;
 
     @FXML
     private Label info;
 
+    @FXML
+    private Label feedback;
+
     double output = 0;
+
     String exchangerate1 = (String) currencytypeIn.getValue();
     String exchangerate2 = (String) currencytypeOut.getValue();
+
+
+
+
+
+    @FXML
+    void onbackclicked(ActionEvent event) {
+        try {
+            /*we can reuse this code in many projects, it changes scenes*/ Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("menu.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 620, 440);
+
+            stage.setTitle("length");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e){
+feedback.setText("Unable to return home");
+        }
+    }
+
+
 
 
     @FXML
@@ -128,7 +161,7 @@ public class Currencycontroller implements Initializable {
 
         currencytypeIn.setItems(currencytypein);
         currencytypeOut.setItems(currencytypeout);
-        currencytypeIn.setValue("EURO");
+        currencytypeIn.setValue("USD");
         currencytypeOut.setValue("POUND-STERLING");
     }
 }

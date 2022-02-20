@@ -1,16 +1,37 @@
 .button{
-    -fx-padding: 0.7em 0.57em;
+    -fx-padding: 8px 16px ;
     -fx-font-size: 14px;
-    -jfx-button-type: RAISED;
-    -fx-background-color: rgb(77,102,204);
-    -fx-pref-width: 200;
-    -fx-text-fill: WHITE;
+     -fx-background-radius: 25px;
+        -fx-border-radius: 25px;
+        -fx-border-width: 0px;
+ -fx-effect: dropshadow( rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+    -fx-background-color: white;
+    -fx-text-fill: black;
 }
 .combo-box{
 -fx-padding: 0.7em 0.57em;
     -fx-font-size: 14px;
+ -fx-background-radius: 25px;
+        -fx-border-radius: 25px;
+        -fx-border-width: 0px;
+    -fx-background-color: white;
 
-    -fx-background-color: rgb(77,102,204);
-    -fx-pref-width: 200;
-    -fx-text-fill: WHITE;
+    -fx-text-fill: black;
+}
+
+.text-field{
+-fx-padding: 0.8em 0.57em;
+    -fx-font-size: 14px;
+
+    -fx-background-color: white;
+ -fx-background-radius: 25px;
+        -fx-border-radius: 25px;
+        -fx-border-width: 0px;
+    -fx-text-fill: black;
+
+}
+
+.anchorpane{
+-fx-background-color: grey;
+
 }
