@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,8 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.lengthController">
+<AnchorPane prefHeight="400.0" prefWidth="852.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.lengthController">
     <children>
+      <VBox layoutX="265.0" layoutY="-100.0" prefHeight="50.0" prefWidth="852.0" style="-fx-padding: 12px;" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" style="-fx-background-color: white;" text="Back" />
+         </children>
+      </VBox>
         <HBox prefHeight="400.0" prefWidth="316.0">
             <children>
                 <VBox prefHeight="400.0" prefWidth="326.0">
