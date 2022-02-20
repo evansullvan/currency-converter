@@ -15,9 +15,14 @@
                   <Button mnemonicParsing="false" onAction="#oncurrencyclicked" text="Currency" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="600.0">
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#onlengthclicked" text="Length" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ontempclicked" text="Temp" />
                </children>
             </HBox>
             <Label fx:id="feedback" alignment="CENTER" contentDisplay="CENTER" />

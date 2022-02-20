@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.currencyconverter.Temp"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.tempController">
+    <children>
+        <VBox layoutX="112.0" layoutY="31.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="81.0" prefWidth="600.0" style="-fx-padding: 12px;">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onbackclicked" text="Back" />
+                        <Label fx:id="feedback" textFill="WHITE" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="103.0" prefWidth="600.0">
+                    <children>
+                        <TextField fx:id="tempIn" onKeyTyped="#onNumberEntered" />
+                        <ComboBox fx:id="temptypeIn" prefWidth="150.0" promptText="From" />
+                        <ComboBox fx:id="temptypeOut" prefWidth="150.0" promptText="To" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="info" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

@@ -47,4 +47,22 @@ public class menuController {
             feedback.setText("Unable to load currency screen");
         }
     }
+
+
+    @FXML
+    void ontempclicked(ActionEvent event) {
+        try {
+            /*we can reuse this code in many projects, it changes scenes*/ Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("temp.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 620, 440);
+
+            stage.setTitle("Temperature converter");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(Exception e){
+            feedback.setText("Unable to load temperature screen");
+        }
+    }
 }
